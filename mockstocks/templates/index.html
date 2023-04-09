@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ username }}'s Account Summary
+{% endblock %}
+
+{% block main %}
+<form action="/" method="get">
+
+    <h3>Portfolio Summary</h3>
+
+    <table>
+        <tbody>
+            <tr style="background-color: #33FF33;">
+                <th>Cash Balance</th>
+                <th>Portfolio Value</th>
+                <th>Total Account Value</th>
+            </tr>
+            <tr>
+                <td>${{ "{:,.2f}".format(user_cash) }}</td>
+                <td>${{ "{:,.2f}".format(stock_value) }}</td>
+                <td>{{ account_value }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    {% if ticker|length < 1 %}
+        <br><br>
+        <h3>No Investments on This Account</h3>
+    {% else %}
+        <br><br>
+        <h3>Investments</h3>
+
+        <table>
+            <thead>
+                <tr style="background-color: #000000; color: #FFFFFF;">
+                    <th>Stock</th>
+                    <th>Company</th>
+                    <th>Shares</th>
+                    <th>Price per Share</th>
+                    <th>Holding Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                    {% for x in range(ticker|length) %}
+                        {% if tot_shares[x] > 0 %}
+                        <tr>
+                            <td>{{ ticker[x] }}</td>
+                            <td>{{ company[x] }}</td>
+                            <td>{{ tot_shares[x] }}</td>
+                            <td>${{ "{:,.2f}".format(price_per_share[x]) }}</td>
+                            <td>${{ "{:,.2f}".format(holding_price[x]) }}</td>
+                        </tr>
+                        {% endif %}
+                    {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+
+</form>
+{% endblock %}

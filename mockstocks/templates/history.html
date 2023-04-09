@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ username }}'s Transaction History
+{% endblock %}
+
+{% block main %}
+<form action="/" method="get">
+
+    <h3>Comprehensive Transaction History</h3>
+
+    <table>
+        <thead>
+            <tr style="background-color: #000000; color: #FFFFFF;">
+                <th>Transaction Type</th>
+                <th>Symbol</th>
+                <th>Shares Exchanged</th>
+                <th>Price per Share</th>
+                <th>Transaction Price</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+                {% for x in range(ticker|length) %}
+                    <tr>
+                        <td>{{ order_type[x] }}</td>
+                        <td>{{ ticker[x] }}</td>
+                        <td>{{ shares[x] }}</td>
+                        <td>${{ price_per_share[x] }}</td>
+                        <td>${{ "{:,.2f}".format(transaction_price[x]) }}</td>
+                        <td>{{ timestamp[x] }}</td>
+                    </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+</form>
+{% endblock %}

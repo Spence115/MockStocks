@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Enter Ticker Symbol
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Ticker Symbol" type="text">
+        </div>
+        <button class="btn btn-success" type="submit">Lookup</button>
+    </form>
+{% endblock %}

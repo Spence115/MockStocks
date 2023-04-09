@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted Stock
+{% endblock %}
+
+{% block main %}
+    <form action="/quoted" method="post">
+        <header>
+            <div class="mb-2">Company: <b>{{ name }}</b></div>
+            <div class="mb-2">Share price: <b>{{ price }}</b></div>
+            <div class="mb-2">Ticker: <b>{{ ticker }}</b></div>
+        </header>
+    <form action="/quote" method="post">
+{% endblock %}

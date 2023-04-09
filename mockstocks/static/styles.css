@@ -1,0 +1,69 @@
+/* General formatting */
+body
+{
+    background: #141414;
+    font-family: 'Calibri';
+}
+
+h3
+{
+    color: white;
+}
+
+.mb-2
+{
+    color: white;
+    font-size: x-large;
+}
+
+/* Making the navbar buttons green */
+.navbar-nav.me-auto .nav-link, .navbar-nav.ms-auto .nav-link
+{
+    color: #33FF33;
+}
+
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #33FF33;
+}
+
+/* Table formatting */
+table {
+    border-collapse: collapse;
+    background-color: #C7C7C7;
+    margin: auto;
+}
+
+th, td {
+    padding: 10px;
+    text-align: right;
+    border: 1px solid #FFF;
+}
+
+th {
+    text-align: left;
+    border-bottom:1px solid black;
+}
+
+td {
+    text-align: left;
+}
