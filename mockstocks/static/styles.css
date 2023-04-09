@@ -47,23 +47,27 @@ nav .navbar-brand .green
 }
 
 /* Table formatting */
-table {
+table 
+{
     border-collapse: collapse;
     background-color: #C7C7C7;
     margin: auto;
 }
 
-th, td {
+th, td 
+{
     padding: 10px;
     text-align: right;
     border: 1px solid #FFF;
 }
 
-th {
+th 
+{
     text-align: left;
     border-bottom:1px solid black;
 }
 
-td {
+td 
+{
     text-align: left;
 }
