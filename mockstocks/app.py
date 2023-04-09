@@ -10,7 +10,7 @@ from helpers import apology, login_required, lookup, usd
 
 # NOTE: use the following to use the data provided by IEX.
 #       Replace KEY with your own key
-# export API_KEY=pk_fce96fa1bfa047e0ad210084604e72e6
+# export API_KEY=KEY
 
 ## The following is the schema of the database 'finance.db' being used in this app.               ##
 ## The variables shown after each table are used for data fetching/writing with the SQL database  ##
